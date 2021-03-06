@@ -1,0 +1,56 @@
+.footer {
+  background: color(black);
+  border-top: 0.1rem solid color(gray);
+  border-left: 0.1rem solid color(CIAred);
+
+  &-top {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    border-left: 0.1rem solid color(gray);
+    border-right: 0.1rem solid color(gray);
+
+    h4 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(lg);
+    }
+
+    .footer-link {
+      margin: 2rem 0;
+    }
+
+    .footer-social-links {
+      a {
+        font-size: size(lg);
+        color: color(white);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: color(CIAred);
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.1rem solid color(gray);
+    border-left: 0.1rem solid color(gray);
+    border-right: 0.1rem solid color(gray);
+
+    .copyright {
+      p {
+        @include textStyles();
+        color: color(white);
+        font-size: size(xxs);
+      }
+    }
+  }
+}
