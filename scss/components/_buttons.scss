@@ -1,4 +1,4 @@
-.hero-btn {
+.cia-btn {
   @include textStyles();
   font-family: inherit;
   color: color(white);
@@ -17,6 +17,7 @@
   &:focus {
     border: 0.1rem solid color(CIAred);
     box-shadow: 0.5rem 0.5rem 0 color(CIAred);
+    outline: 0;
 
     i {
       transform: rotate(0);

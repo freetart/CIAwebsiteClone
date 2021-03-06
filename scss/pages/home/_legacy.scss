@@ -1,4 +1,6 @@
-.agency {
+.legacy {
+  background: color(black);
+
   &-content {
     @include maxWidthLg();
     @include sectionSpacing();
@@ -6,28 +8,29 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
+    color: color(white);
 
     &-img {
       text-align: center;
 
       img {
-        width: 10rem;
+        width: 75%;
       }
+    }
+
+    &-info {
+      border-left: 0.1rem solid color(gray);
+      border-right: 0.1rem solid color(gray);
+      padding: 0 2rem;
 
       h2 {
         @include headingStyles();
         font-size: size(xxl);
       }
-    }
 
-    &-info {
-      border-left: 0.1rem solid color(black);
-      border-right: 0.1rem solid color(black);
-      padding: 0 2rem;
-
-      h3 {
+      h4 {
         @include headingStyles();
-        font-size: size(xl);
+        font-size: size(lg);
       }
 
       p {
