@@ -1,5 +1,6 @@
 .factbook {
   background: #000;
+  border-left: 0.1rem solid color(CIAred);
 
   &-content {
     @include sectionSpacing();
@@ -11,9 +12,6 @@
     color: color(white);
 
     &-info {
-      border-left: 0.1rem solid color(CIAred);
-      padding-left: 1rem;
-
       h2 {
         @include headingStyles();
         font-size: size(xxl);

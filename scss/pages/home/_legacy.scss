@@ -1,5 +1,6 @@
 .legacy {
   background: color(black);
+  border-left: 0.1rem solid color(CIAred);
 
   &-content {
     @include maxWidthLg();
