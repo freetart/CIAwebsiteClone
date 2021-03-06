@@ -1,0 +1,25 @@
+.hero-btn {
+  @include textStyles();
+  font-family: inherit;
+  color: color(white);
+  padding: 1rem 2rem;
+  font-size: size(md);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  border-bottom: 0.1rem solid color(CIAred);
+
+  i {
+    transform: rotate(-45deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    border: 0.1rem solid color(CIAred);
+    box-shadow: 0.5rem 0.5rem 0 color(CIAred);
+
+    i {
+      transform: rotate(0);
+    }
+  }
+}

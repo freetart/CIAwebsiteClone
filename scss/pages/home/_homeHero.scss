@@ -1,0 +1,42 @@
+.home-hero {
+  background: color(black);
+
+  &-content {
+    @include maxWidthLg();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    color: color(white);
+    border-left: 0.1rem solid color(gray);
+    padding: 0 2rem;
+
+    .home-hero-info {
+      .home-hero-desc {
+        border-left: 0.1rem solid color(CIAred);
+        padding-left: 1rem;
+      }
+
+      h1 {
+        @include headingStyles();
+        font-size: size(xxl) + 3rem;
+      }
+
+      h5 {
+        @include headingStyles();
+        font-size: size(md);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+      }
+    }
+
+    img {
+      border-left: 0.1rem solid color(gray);
+      border-right: 0.1rem solid color(gray);
+      padding-top: 15rem;
+    }
+  }
+}
