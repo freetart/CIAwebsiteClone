@@ -1,6 +1,7 @@
 .home-hero {
   background: color(black);
   border-left: 0.1rem solid color(CIAred);
+  overflow: hidden;
 
   &-content {
     @include maxWidthLg();
