@@ -1,0 +1,35 @@
+.agency {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+
+    &-img {
+      text-align: center;
+
+      img {
+        width: 10rem;
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl);
+      }
+    }
+
+    &-info {
+      h3 {
+        @include headingStyles();
+        font-size: size(xl);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(sm);
+      }
+    }
+  }
+}

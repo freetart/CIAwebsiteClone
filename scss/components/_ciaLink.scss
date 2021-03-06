@@ -1,0 +1,38 @@
+.cia-link {
+  overflow: hidden;
+
+  a {
+    @include textStyles();
+    font-size: size(xs);
+    color: color(black);
+    border-bottom: 0.1rem solid color(CIAred);
+    position: relative;
+    transition: 0.4s ease-in-out;
+    z-index: 1;
+    padding-left: 0.5rem;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  a:hover::before,
+  a:focus::before {
+    transform: translateX(0);
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11rem;
+    height: 2.5rem;
+    display: block;
+    background-color: color(CIAred);
+    transform: translateX(-100%);
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+  }
+}
