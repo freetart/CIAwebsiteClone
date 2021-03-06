@@ -9,11 +9,11 @@
     position: relative;
     transition: 0.4s ease-in-out;
     z-index: 1;
-    padding-left: 0.5rem;
+    padding: 0 0.5rem;
 
     &:hover,
     &:focus {
-      color: white;
+      color: color(white);
       outline: 0;
     }
   }
@@ -28,12 +28,24 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 11rem;
-    height: 2.5rem;
+    width: 100%;
+    height: 100%;
     display: block;
     background-color: color(CIAred);
-    transform: translateX(-100%);
+    transform: translateX(-10vw);
     transition: 0.4s ease-in-out;
     z-index: -1;
+  }
+}
+
+.cia-link-light {
+  @extend .cia-link;
+  a {
+    color: color(white);
+  }
+
+  &:hover,
+  &:focus {
+    color: color(black);
   }
 }

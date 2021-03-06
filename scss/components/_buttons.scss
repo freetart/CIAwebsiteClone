@@ -24,3 +24,8 @@
     }
   }
 }
+
+.cia-btn-light {
+  @extend .cia-btn;
+  color: color(black);
+}
