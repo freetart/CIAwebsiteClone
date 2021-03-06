@@ -5,15 +5,14 @@
 
   &-content {
     @include maxWidthLg();
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: center;
+    @include twoColGrid();
     color: color(white);
     border-left: 0.1rem solid color(gray);
     padding: 0 2rem;
 
     .home-hero-info {
+      padding: 10rem 0;
+
       .home-hero-desc {
         border-left: 0.1rem solid color(CIAred);
         padding-left: 1rem;
@@ -39,6 +38,10 @@
       border-left: 0.1rem solid color(gray);
       border-right: 0.1rem solid color(gray);
       padding-top: 15rem;
+
+      @include responsive(lg) {
+        padding-top: 5rem;
+      }
     }
   }
 }

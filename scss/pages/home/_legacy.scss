@@ -5,10 +5,7 @@
   &-content {
     @include maxWidthLg();
     @include sectionSpacing();
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+    @include twoColGrid();
     color: color(white);
 
     &-img {
@@ -22,7 +19,7 @@
     &-info {
       border-left: 0.1rem solid color(gray);
       border-right: 0.1rem solid color(gray);
-      padding: 0 2rem;
+      padding: 0 2rem 5rem 2rem;
 
       h2 {
         @include headingStyles();

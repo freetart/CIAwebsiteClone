@@ -2,13 +2,33 @@
   background: color(black);
   border-top: 0.1rem solid color(gray);
   border-left: 0.1rem solid color(CIAred);
+  position: relative;
+  overflow-x: hidden;
+
+  .footer-cia-bg {
+    color: color(CIAred);
+    opacity: 0.15;
+    font-size: size(xxl) + 20rem;
+    position: absolute;
+    top: 15%;
+    right: -6%;
+    transform: rotate(-90deg);
+    pointer-events: none;
+
+    @include responsive(md) {
+      right: -20%;
+    }
+
+    @include responsive(sm) {
+      right: -30%;
+    }
+  }
 
   &-top {
     @include maxWidthLg();
     @include sectionSpacing();
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    @include fourColGrid();
+
     border-left: 0.1rem solid color(gray);
     border-right: 0.1rem solid color(gray);
 
@@ -42,15 +62,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     border-top: 0.1rem solid color(gray);
     border-left: 0.1rem solid color(gray);
     border-right: 0.1rem solid color(gray);
+
+    .footer-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     .copyright {
       p {
         @include textStyles();
         color: color(white);
         font-size: size(xxs);
+        padding-top: 2rem;
       }
     }
   }

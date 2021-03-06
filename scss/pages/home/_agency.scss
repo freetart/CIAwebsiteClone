@@ -2,13 +2,15 @@
   &-content {
     @include maxWidthLg();
     @include sectionSpacing();
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+    @include twoColGrid();
 
     &-img {
+      order: -1;
       text-align: center;
+
+      @include responsive(lg) {
+        padding-bottom: 5rem;
+      }
 
       img {
         width: 10rem;

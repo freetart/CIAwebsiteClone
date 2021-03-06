@@ -10,9 +10,7 @@ $cardTransition: all 0.3s ease-in-out;
   }
 
   &-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    @include threeColGrid();
   }
 
   .stories-card {

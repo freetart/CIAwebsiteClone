@@ -21,6 +21,10 @@
     .navbar-links {
       display: flex;
 
+      @include responsive(lg) {
+        display: none;
+      }
+
       .cia-link-light {
         margin: 1.5rem;
       }

@@ -5,10 +5,7 @@
   &-content {
     @include sectionSpacing();
     @include maxWidthLg();
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
+    @include twoColGrid();
     color: color(white);
 
     &-info {
