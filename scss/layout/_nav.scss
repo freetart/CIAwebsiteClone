@@ -1,0 +1,42 @@
+.navbar {
+  background: color(black);
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  border-bottom: 0.1rem solid color(gray);
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar-logo {
+      img {
+        width: 7rem;
+      }
+    }
+
+    .navbar-links {
+      .navbar-link {
+        @include headingStyles();
+        color: color(white);
+        font-size: size(xs);
+        margin: 1rem;
+        border: 0.1rem solid color(CIAred);
+        padding: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0.5rem 0.5rem 0 color(CIAred);
+          color: color(CIAred);
+        }
+      }
+    }
+  }
+
+  &.navbarScroll {
+    padding: 0.5rem 0.5rem;
+  }
+}
