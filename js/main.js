@@ -35,3 +35,20 @@ overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
   body.style.overflowY = "auto";
 });
+
+// generate random hero
+const homeHeroContainer = document.querySelector(".home-hero-img");
+
+function generateRandomNumber(num) {
+  return Math.floor(Math.random(num) * 6 + 1);
+}
+
+function generateHero() {
+  const img = document.createElement("img");
+
+  img.src = `img/portraits/portrait-${generateRandomNumber()}.png`;
+  img.alt = `home hero`;
+
+  homeHeroContainer.appendChild(img);
+}
+generateHero();
