@@ -1,0 +1,31 @@
+.language {
+  &-content {
+    @include maxWidthLg();
+    @include twoColGrid();
+    @include sectionSpacing();
+    gap: 6rem;
+
+    .language-info {
+      border-left: 0.1rem solid color(black);
+      padding-left: 2rem;
+
+      @include responsive(lg) {
+        order: -1;
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+      }
+
+      @include responsive(lg) {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
