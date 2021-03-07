@@ -1,4 +1,4 @@
-.home-hero {
+.careers-hero {
   background: color(black);
   border-left: 0.1rem solid color(CIAred);
   overflow: hidden;
@@ -10,10 +10,10 @@
     border-left: 0.1rem solid color(gray);
     padding: 0 2rem;
 
-    .home-hero-info {
+    .careers-hero-info {
       padding: 10rem 0;
 
-      .home-hero-desc {
+      .careers-hero-desc {
         border-left: 0.1rem solid color(CIAred);
         padding-left: 1rem;
       }
@@ -31,6 +31,33 @@
       p {
         @include textStyles();
         font-size: size(xs);
+      }
+
+      small {
+        @include textStyles();
+        font-size: size(xxs);
+      }
+
+      .careers-hero-search {
+        position: relative;
+
+        input {
+          font-size: size(md);
+          padding: 1rem 2rem;
+          width: 100%;
+          background: transparent;
+          border: 0;
+          border-bottom: 0.1rem solid color(CIAred);
+          color: color(white);
+        }
+
+        i {
+          position: absolute;
+          top: 3.7rem;
+          right: 2rem;
+          font-size: size(md);
+          color: color(CIAred);
+        }
       }
     }
 

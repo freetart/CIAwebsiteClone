@@ -37,18 +37,18 @@ overlay.addEventListener("click", () => {
 });
 
 // generate random hero
-const homeHeroContainer = document.querySelector(".home-hero-img");
+const heroContainer = document.querySelector(".hero-img");
 
 function generateRandomNumber(num) {
-  return Math.floor(Math.random(num) * 6 + 1);
+  return Math.floor(Math.random(num) * 10 + 1);
 }
 
 function generateHero() {
   const img = document.createElement("img");
 
   img.src = `img/portraits/portrait-${generateRandomNumber()}.png`;
-  img.alt = `home hero`;
+  img.alt = `hero`;
 
-  homeHeroContainer.appendChild(img);
+  heroContainer.appendChild(img);
 }
 generateHero();
