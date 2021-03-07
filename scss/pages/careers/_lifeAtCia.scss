@@ -1,0 +1,85 @@
+.life-at-cia {
+  background: color(black);
+
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    color: color(white);
+
+    .life-at-cia-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+        width: 50%;
+      }
+    }
+
+    .glide {
+      .glide__slide {
+        display: flex;
+        align-items: center;
+        background-color: color(white);
+        color: color(black);
+
+        &:hover {
+          cursor: grab;
+        }
+
+        &:active {
+          cursor: grabbing;
+        }
+
+        blockquote {
+          padding: 2rem;
+
+          h5 {
+            @include textStyles();
+            font-size: size(xxl);
+          }
+
+          .quote-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 0.1rem solid color(black);
+
+            cite {
+              @include textStyles();
+              font-size: size(md);
+            }
+
+            i {
+              font-size: size(xxl);
+            }
+          }
+        }
+
+        img {
+          width: 40%;
+          background: color(black);
+        }
+      }
+
+      .controls {
+        text-align: center;
+        button {
+          background: transparent;
+          border: 0.1rem solid color(CIAred);
+          color: color(CIAred);
+          margin: 2rem;
+          font-size: size(lg);
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,10 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="img/favicon/koala.ico" />
     <link rel="stylesheet" href="css/main.min.css" />
@@ -107,7 +111,7 @@
 
     <main>
       <!-- student program -->
-      <section class="student-program">
+      <section class="student-program py-5">
         <div class="student-program-content">
           <div class="student-program-info">
             <h2>Student Programs</h2>
@@ -115,7 +119,9 @@
               Launch your career; help safeguard our Nation with an internship
               or co-op opportunity.
             </p>
-            <a href="#!" class="cia-btn-light">Explore Opportunities</a>
+            <div class="cia-link">
+              <a href="#!">Explore Opportunities</a>
+            </div>
           </div>
           <div class="student-program-img">
             <img src="img/careers/student.jpg" alt="student program image" />
@@ -124,7 +130,7 @@
       </section>
 
       <!-- language -->
-      <section class="language">
+      <section class="language py-5">
         <div class="language-content">
           <div class="language-img">
             <img
@@ -139,7 +145,97 @@
               Discover how you can use your language abilities in a career
               that’s as exciting as it is fulfilling.
             </p>
-            <a href="#!" class="cia-btn-light">Explore Opportunities</a>
+            <div class="cia-link">
+              <a href="#!">Explore Opportunities</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- life at cia carousel -->
+      <section class="life-at-cia py-5">
+        <div class="life-at-cia-content">
+          <div class="life-at-cia-title pb-5">
+            <h2>Life at CIA</h2>
+            <p>
+              Our diverse workforce is our strength. Learn more about our
+              employees—and their unique backgrounds and roles—who keep our
+              Nation safe.
+            </p>
+          </div>
+
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <blockquote>
+                    <h5 class="pb-2">
+                      From the moment my college mentor said "You can write for
+                      the President within your first six months if you worked
+                      at the CIA" I knew I wanted the reponsiblity.
+                    </h5>
+                    <div class="quote-bottom pt-5">
+                      <cite>Cyber threat analysis</cite>
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                  </blockquote>
+                  <img src="img/portraits/portrait-9.png" alt="portrait 5" />
+                </li>
+                <li class="glide__slide">
+                  <blockquote>
+                    <h5 class="pb-2">
+                      Knowing my work impact key US interests here and overseas,
+                      and that senior policymakers, including the President,
+                      value what I do, makes it exciting to come to work each
+                      day
+                    </h5>
+                    <div class="quote-bottom pt-5">
+                      <cite>Political analysis</cite>
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                  </blockquote>
+                  <img src="img/portraits/portrait-4.png" alt="portrait 4" />
+                </li>
+                <li class="glide__slide">
+                  <blockquote>
+                    <h5 class="pb-2">
+                      With every task I have undertaken, I am always encouraged
+                      to think outside the box. I come to work every day for my
+                      family. This is my small piece that I contribute to their
+                      greater and safer future.
+                    </h5>
+                    <div class="quote-bottom pt-5">
+                      <cite>Operations Officer</cite>
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                  </blockquote>
+                  <img src="img/portraits/portrait-7.png" alt="portrait 7" />
+                </li>
+                <li class="glide__slide">
+                  <blockquote>
+                    <h5 class="pb-2">
+                      There is simply not any other job like this - I enable
+                      policymakers, war fighters, and other government officials
+                      with the details they need to move forward in their
+                      efforts. Here at the Agency, we're unique.
+                    </h5>
+                    <div class="quote-bottom pt-5">
+                      <cite>Collection Management Officer</cite>
+                      <i class="fas fa-quote-left"></i>
+                    </div>
+                  </blockquote>
+                  <img src="img/portraits/portrait-5.png" alt="portrait 5" />
+                </li>
+              </ul>
+            </div>
+            <div data-glide-el="controls" class="controls">
+              <button data-glide-dir="<">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button data-glide-dir=">">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -246,6 +342,15 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({ offset: 200, duration: 1000, once: true });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      const config = {
+        type: "carousel",
+        autoplay: 8000,
+        hoverpause: true,
+      };
+      new Glide(".glide", config).mount();
     </script>
   </body>
 </html>
