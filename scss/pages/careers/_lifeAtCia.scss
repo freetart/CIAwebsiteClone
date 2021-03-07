@@ -10,25 +10,40 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
+      flex-wrap: wrap;
 
       h2 {
         @include headingStyles();
         font-size: size(xxl) + 2rem;
+
+        @include responsive(lg) {
+          text-align: center;
+        }
       }
 
       p {
         @include textStyles();
         font-size: size(xs);
         width: 50%;
+
+        @include responsive(lg) {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
 
     .glide {
       .glide__slide {
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
         align-items: center;
         background-color: color(white);
         color: color(black);
+
+        @include responsive(md) {
+          grid-template-columns: 1fr;
+        }
 
         &:hover {
           cursor: grab;
@@ -44,6 +59,10 @@
           h5 {
             @include textStyles();
             font-size: size(xxl);
+
+            @include responsive(xl) {
+              font-size: size(lg);
+            }
           }
 
           .quote-bottom {
@@ -64,8 +83,12 @@
         }
 
         img {
-          width: 40%;
+          width: 100%;
           background: color(black);
+
+          @include responsive(md) {
+            order: -1;
+          }
         }
       }
 

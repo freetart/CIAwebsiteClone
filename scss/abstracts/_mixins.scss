@@ -78,6 +78,12 @@
 }
 
 @mixin responsive($breakpoint) {
+  @if ($breakpoint == xl) {
+    @media (max-width: 1230px) {
+      @content;
+    }
+  }
+
   @if ($breakpoint == lg) {
     @media (max-width: 900px) {
       @content;
@@ -85,7 +91,7 @@
   }
 
   @if ($breakpoint == md) {
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       @content;
     }
   }
