@@ -1,0 +1,20 @@
+.career-about {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include fourColGrid();
+    gap: 4rem;
+
+    h4 {
+      @include headingStyles();
+      font-size: size(xl);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(xs);
+      border-left: 0.1rem solid color(black);
+      padding-left: 1rem;
+    }
+  }
+}
