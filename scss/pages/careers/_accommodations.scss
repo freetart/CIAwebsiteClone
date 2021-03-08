@@ -1,0 +1,33 @@
+.accommodations {
+  background: url("/img/careers/park.jpg") center center/cover no-repeat fixed;
+
+  &-content {
+    @include twoColGrid();
+    color: color(white);
+
+    &-info {
+      @include sectionSpacing();
+      @include maxWidthLg();
+      height: 100%;
+      width: 100%;
+      background-color: color(black);
+      border: 0.2rem solid color(CIAred);
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+        border-left: 0.1rem solid color(black);
+        padding-left: 1rem;
+      }
+
+      a {
+        color: color(CIAred);
+      }
+    }
+  }
+}

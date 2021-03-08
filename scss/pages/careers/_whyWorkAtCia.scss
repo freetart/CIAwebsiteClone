@@ -8,7 +8,7 @@
     color: color(white);
     background-color: color(black);
     text-align: center;
-    border-radius: 0.5rem;
+    border: 0.2rem solid color(CIAred);
 
     h2 {
       @include headingStyles();
