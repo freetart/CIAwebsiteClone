@@ -1,0 +1,120 @@
+.featured-jobs {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+
+    .featured-jobs-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+
+        @include responsive(lg) {
+          text-align: center;
+        }
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(xs);
+        width: 50%;
+
+        @include responsive(lg) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .featured-jobs-cards {
+      @include twoColGrid();
+      gap: 6rem;
+
+      .featured-jobs-card {
+        color: color(black);
+        border: 0.1rem solid color(black);
+        transition: $cardTransition;
+
+        &:hover,
+        &:focus {
+          border: 0.1rem solid color(CIAred);
+          outline: 0;
+
+          .featured-jobs-card-header {
+            border-bottom: 0.1rem solid color(CIAred);
+
+            h2 {
+              border-bottom: 0.1rem solid color(CIAred);
+              background-color: color(CIAred);
+              color: color(white);
+            }
+          }
+
+          .featured-jobs-card-info {
+            border-bottom: 0.1rem solid color(CIAred);
+          }
+
+          .featured-jobs-card-footer {
+            i {
+              transform: rotate(0);
+              color: color(CIAred);
+            }
+          }
+        }
+
+        &-header {
+          border-bottom: 0.1rem solid color(black);
+          transition: $cardTransition;
+
+          h2 {
+            @include headingStyles();
+            font-size: size(lg);
+            border-bottom: 0.1rem solid color(black);
+            padding: 1rem;
+            transition: $cardTransition;
+          }
+
+          p {
+            @include textStyles();
+            font-size: size(xs);
+            padding: 1rem 1rem;
+          }
+        }
+
+        &-info {
+          padding: 1rem;
+          border-bottom: 0.1rem solid color(black);
+          transition: $cardTransition;
+
+          li {
+            @include textStyles();
+            font-size: size(xxs);
+            padding: 1rem 0;
+          }
+        }
+
+        &-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 1rem;
+
+          p {
+            @include textStyles();
+            font-size: size(sm);
+          }
+
+          i {
+            font-size: size(xl);
+            transform: rotate(-45deg);
+            transition: $cardTransition;
+          }
+        }
+      }
+    }
+  }
+}
