@@ -1,0 +1,36 @@
+.about-hero {
+  background: color(black);
+  border-left: 0.1rem solid color(CIAred);
+
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    color: color(white);
+    gap: 6rem;
+    padding-top: 10rem;
+
+    .about-hero-info {
+      h1 {
+        @include headingStyles();
+        font-size: size(xxl) + 4rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+        border-left: 0.1rem solid color(CIAred);
+        padding-left: 1rem;
+      }
+    }
+
+    .about-hero-img {
+      border-left: 0.1rem solid color(gray);
+      border-right: 0.1rem solid color(gray);
+
+      img {
+        padding: 2rem;
+      }
+    }
+  }
+}
