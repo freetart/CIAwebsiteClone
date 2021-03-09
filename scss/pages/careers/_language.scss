@@ -27,5 +27,11 @@
         padding-bottom: 2rem;
       }
     }
+
+    .language-img {
+      img {
+        box-shadow: $imgShadow;
+      }
+    }
   }
 }

@@ -23,5 +23,11 @@
         padding-bottom: 2rem;
       }
     }
+
+    .student-program-img {
+      img {
+        box-shadow: $imgShadow;
+      }
+    }
   }
 }

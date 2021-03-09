@@ -1,0 +1,48 @@
+.explore {
+  @include maxWidthLg();
+
+  h2 {
+    @include headingStyles();
+    font-size: size(xxl) + 2rem;
+    text-align: center;
+  }
+
+  &-cards {
+    @include threeColGrid();
+    @include sectionSpacing();
+    gap: 6rem;
+    text-align: center;
+
+    .explore-card {
+      color: color(black);
+
+      &:hover,
+      &:focus {
+        i,
+        h4,
+        p {
+          color: color(CIAred);
+          transition: $cardTransition;
+        }
+      }
+
+      img {
+        width: 50%;
+      }
+
+      h4 {
+        @include headingStyles();
+        font-size: size(xxl);
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+      }
+
+      i {
+        font-size: size(xxl);
+      }
+    }
+  }
+}
