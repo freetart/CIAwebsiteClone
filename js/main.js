@@ -1,6 +1,6 @@
 "use strict";
 
-// add background to nav on scroll
+// decrease padding on nav on scroll
 const nav = document.querySelector(".navbar");
 
 function fixedNav() {

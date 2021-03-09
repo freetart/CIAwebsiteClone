@@ -1,0 +1,36 @@
+.what-we-do {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    gap: 6rem;
+
+    &-info {
+      &-content {
+        border-left: 0.1rem solid color(black);
+        padding-left: 2rem;
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(sm);
+      }
+
+      ul {
+        padding-left: 5rem;
+      }
+
+      li {
+        @include textStyles();
+        font-size: size(xs);
+        list-style: upper-roman;
+        padding: 1rem 0;
+      }
+    }
+  }
+}

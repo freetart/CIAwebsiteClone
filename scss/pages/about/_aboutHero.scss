@@ -7,7 +7,7 @@
     @include twoColGrid();
     color: color(white);
     gap: 6rem;
-    padding-top: 10rem;
+    padding: 10rem 2rem 0 2rem;
 
     .about-hero-info {
       h1 {
