@@ -4,7 +4,6 @@
 
   &-content {
     @include maxWidthLg();
-    @include sectionSpacing();
     @include twoColGrid();
     color: color(white);
     gap: 6rem;

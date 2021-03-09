@@ -1,0 +1,45 @@
+.line-of-defense {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    gap: 6rem;
+
+    .line-of-defense-left {
+      border-left: 0.1rem solid color(black);
+      padding-left: 1rem;
+
+      h2 {
+        @include headingStyles();
+        font-size: size(lg);
+      }
+    }
+
+    .line-of-defense-right {
+      border-left: 0.1rem solid color(black);
+      padding-left: 1rem;
+
+      small {
+        @include textStyles();
+        font-size: size(xs);
+      }
+    }
+
+    .line-of-defense-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.1rem solid color(black);
+      padding-bottom: 1rem;
+
+      img {
+        width: 5rem;
+      }
+
+      small {
+        @include textStyles();
+        font-size: size(xxs);
+      }
+    }
+  }
+}
