@@ -1,0 +1,20 @@
+.leadership {
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    gap: 6rem;
+
+    &-info {
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+      }
+    }
+  }
+}
