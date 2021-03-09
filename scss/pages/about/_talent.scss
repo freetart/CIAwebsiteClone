@@ -1,0 +1,28 @@
+.talent {
+  background: color(black);
+
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    color: color(white);
+    gap: 6rem;
+
+    &-info {
+      &-inner {
+        border-left: 0.1rem solid color(CIAred);
+        padding-left: 2rem;
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(sm);
+      }
+    }
+  }
+}
