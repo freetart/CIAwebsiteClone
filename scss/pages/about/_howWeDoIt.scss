@@ -1,0 +1,35 @@
+.how-we-do-it {
+  background: color(black);
+
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include twoColGrid();
+    color: color(white);
+    gap: 6rem;
+
+    &-info {
+      h2 {
+        @include headingStyles();
+        font-size: size(xxl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(sm);
+      }
+
+      ul {
+        padding-left: 5rem;
+        border-left: 0.1rem solid color(CIAred);
+      }
+
+      li {
+        @include textStyles();
+        font-size: size(xs);
+        list-style: circle;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
