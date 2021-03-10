@@ -33,7 +33,7 @@
       }
     }
 
-    &-img {
+    &-img:not(.cta) {
       img {
         box-shadow: $imgShadow;
       }

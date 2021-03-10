@@ -1,0 +1,75 @@
+.cards-dark {
+  border-top: 0.1rem solid color(black);
+  border-bottom: 0.1rem solid color(black);
+
+  h2 {
+    @include headingStyles();
+    font-size: size(xxl) + 2rem;
+    text-align: center;
+  }
+
+  &-content {
+    @include maxWidthLg();
+    @include sectionSpacing();
+    @include threeColGrid();
+    gap: 6rem;
+
+    &-card {
+      color: color(black);
+      border: 0.1rem solid color(black);
+      transition: $cardTransition;
+
+      &:hover,
+      &:focus {
+        border: 0.1rem solid color(CIAred);
+
+        i {
+          transform: rotate(0);
+          color: color(CIAred);
+        }
+
+        h4,
+        p {
+          color: color(CIAred);
+        }
+      }
+
+      img {
+        height: 40rem;
+
+        @include responsive(lg) {
+          height: 60rem;
+        }
+      }
+
+      &-body {
+        padding: 2rem;
+
+        h4 {
+          @include headingStyles();
+          font-size: size(lg);
+          transition: $cardTransition;
+        }
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+
+        p {
+          @include textStyles();
+          font-size: size(sm);
+          transition: $cardTransition;
+        }
+
+        i {
+          font-size: size(xxl);
+          transform: rotate(-45deg);
+          transition: $cardTransition;
+        }
+      }
+    }
+  }
+}

@@ -6,10 +6,6 @@
 // Base
 @import "base/base";
 
-// Components
-@import "components/buttons";
-@import "components/ciaLink";
-
 // Layout
 @import "layout/grid";
 @import "layout/nav";
@@ -19,6 +15,11 @@
 @import "layout/innerpageDescription";
 @import "layout/sectionDark";
 @import "layout/sectionLight";
+
+// Components
+@import "components/buttons";
+@import "components/ciaLink";
+@import "components/cards";
 
 // Pages
 @import "pages/home/homeHero";
