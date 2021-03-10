@@ -11,9 +11,14 @@
 @import "components/ciaLink";
 
 // Layout
+@import "layout/grid";
 @import "layout/nav";
 @import "layout/footer";
 @import "layout/hamburgerMenu";
+@import "layout/innerPageHero";
+@import "layout/innerpageDescription";
+@import "layout/sectionDark";
+@import "layout/sectionLight";
 
 // Pages
 @import "pages/home/homeHero";
@@ -23,25 +28,11 @@
 @import "pages/home/factbook";
 
 @import "pages/careers/careersHero";
-@import "pages/careers/studentProgram";
-@import "pages/careers/language";
 @import "pages/careers/lifeAtCia";
 @import "pages/careers/featuredJobs";
 @import "pages/careers/whyWorkAtCia";
 @import "pages/careers/careerAbout";
 @import "pages/careers/accommodations";
 
-@import "pages/about/aboutHero";
-@import "pages/about/lineOfDefense";
-@import "pages/about/whatIsCia";
-@import "pages/about/whatWeDo";
-@import "pages/about/howWeDoIt";
-@import "pages/about/ourMission";
-@import "pages/about/ourOrganization";
 @import "pages/about/leadership";
 @import "pages/about/explore";
-@import "pages/about/talent";
-
-// Themes
-
-// Vendors

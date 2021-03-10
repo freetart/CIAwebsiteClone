@@ -1,11 +1,11 @@
-.line-of-defense {
+.innerpage-description {
   &-content {
     @include maxWidthLg();
     @include sectionSpacing();
     @include twoColGrid();
     gap: 6rem;
 
-    .line-of-defense-left {
+    &-left {
       border-left: 0.1rem solid color(black);
       padding-left: 1rem;
 
@@ -15,7 +15,7 @@
       }
     }
 
-    .line-of-defense-right {
+    &-right {
       border-left: 0.1rem solid color(black);
       padding-left: 1rem;
 
@@ -25,7 +25,7 @@
       }
     }
 
-    .line-of-defense-bottom {
+    &-bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;

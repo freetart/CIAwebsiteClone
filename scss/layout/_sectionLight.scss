@@ -1,11 +1,16 @@
-.our-mission {
+.section-light {
   &-content {
     @include maxWidthLg();
-    @include twoColGrid();
     @include sectionSpacing();
+    @include twoColGrid();
     gap: 6rem;
 
     &-info {
+      &-inner {
+        border-left: 0.1rem solid color(black);
+        padding-left: 2rem;
+      }
+
       h2 {
         @include headingStyles();
         font-size: size(xxl) + 2rem;
@@ -16,9 +21,15 @@
         font-size: size(sm);
       }
 
-      &-inner {
-        border-left: 0.1rem solid color(black);
-        padding-left: 2rem;
+      ul {
+        padding-left: 5rem;
+      }
+
+      li {
+        @include textStyles();
+        font-size: size(xs);
+        list-style: upper-roman;
+        padding: 1rem 0;
       }
     }
 

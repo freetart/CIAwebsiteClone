@@ -37,46 +37,6 @@
   margin: 0 auto;
 }
 
-@mixin twoColGrid() {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  align-items: center;
-
-  @include responsive(lg) {
-    grid-template-columns: 1fr;
-
-    &-info {
-      order: -1;
-    }
-  }
-}
-
-@mixin threeColGrid() {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  align-items: center;
-
-  @include responsive(lg) {
-    grid-template-columns: 1fr;
-  }
-}
-
-@mixin fourColGrid() {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-
-  @include responsive(lg) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include responsive(md) {
-    grid-template-columns: 1fr;
-  }
-}
-
 @mixin responsive($breakpoint) {
   @if ($breakpoint == xl) {
     @media (max-width: 1230px) {
