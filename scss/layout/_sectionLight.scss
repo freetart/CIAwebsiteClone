@@ -14,6 +14,10 @@
       h2 {
         @include headingStyles();
         font-size: size(xxl) + 2rem;
+
+        @include responsive(sm) {
+          font-size: size(xxl);
+        }
       }
 
       p {

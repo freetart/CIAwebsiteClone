@@ -21,6 +21,10 @@
       h1 {
         @include headingStyles();
         font-size: size(xxl) + 3rem;
+
+        @include responsive(sm) {
+          font-size: size(xxl) + 2rem;
+        }
       }
 
       h5 {
